@@ -27,8 +27,15 @@ BBLAYERS ?= " \
     ##OEROOT##/../meta-openamp \
     ##OEROOT##/../meta-jupyter \
     ##OEROOT##/../meta-ultra96v2 \
+    ##OEROOT##/../meta-ros/meta-ros-backports-warrior \
+    ##OEROOT##/../meta-ros/meta-ros-common \
+    ##OEROOT##/../meta-ros/meta-ros2 \
+    ##OEROOT##/../meta-ros/meta-ros2-dashing \
 "
 
 BBLAYERS_NON_REMOVABLE ?= " \
     ##OEROOT##/meta \
 "
+
+ROS_DISTRO_BASELINE_PLATFORM ?= "ubuntu-bionic"
+ROS_DISTRO ?= "dashing"

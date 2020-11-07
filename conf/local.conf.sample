@@ -233,3 +233,6 @@ CONF_VERSION = "1"
 
 # To setup bridge to communicate with qemu environment, use below and setup bridge, qemu-ifup, qemu-ifdown script.
 #QB_TAP_OPT_forcevariable = "-netdev tap,id=net0,ifname=tap0"
+
+BBMASK = "##OEROOT##/../meta-ros/meta-ros-backports-warrior/recipes-devtools/python/python3_3.7.5.bb"
+
