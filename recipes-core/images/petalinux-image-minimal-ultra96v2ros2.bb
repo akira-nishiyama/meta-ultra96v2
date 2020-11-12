@@ -14,5 +14,12 @@ CORE_IMAGE_EXTRA_INSTALL_append = " usbutils"
 CORE_IMAGE_EXTRA_INSTALL_append = " ethtool"
 CORE_IMAGE_EXTRA_INSTALL_append = " i2c-tools"
 
+CORE_IMAGE_EXTRA_INSTALL_append = " xrt"
+CORE_IMAGE_EXTRA_INSTALL_append = " xrt-dev"
+CORE_IMAGE_EXTRA_INSTALL_append = " zocl"
+CORE_IMAGE_EXTRA_INSTALL_append = " opencl-clhpp-dev"
+CORE_IMAGE_EXTRA_INSTALL_append = " opencl-headers-dev"
+CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-opencv"
+
 CORE_IMAGE_EXTRA_INSTALL_append = " ros-core"
 
