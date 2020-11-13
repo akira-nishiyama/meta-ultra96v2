@@ -16,6 +16,7 @@ BBLAYERS ?= " \
     ##OEROOT##/../meta-openembedded/meta-xfce \
     ##OEROOT##/../meta-openembedded/meta-initramfs \
     ##OEROOT##/../meta-openembedded/meta-oe \
+    ##OEROOT##/../meta-clang \
     ##OEROOT##/../meta-browser \
     ##OEROOT##/../meta-qt5 \
     ##OEROOT##/../meta-xilinx/meta-xilinx-bsp \
@@ -26,11 +27,12 @@ BBLAYERS ?= " \
     ##OEROOT##/../meta-virtualization \
     ##OEROOT##/../meta-openamp \
     ##OEROOT##/../meta-jupyter \
+    ##OEROOT##/../meta-vitis-ai \
     ##OEROOT##/../meta-ultra96v2 \
-    ##OEROOT##/../meta-ros/meta-ros-backports-warrior \
+    ##OEROOT##/../meta-ros/meta-ros-backports-dunfell \
     ##OEROOT##/../meta-ros/meta-ros-common \
     ##OEROOT##/../meta-ros/meta-ros2 \
-    ##OEROOT##/../meta-ros/meta-ros2-dashing \
+    ##OEROOT##/../meta-ros/meta-ros2-eloquent \
 "
 
 BBLAYERS_NON_REMOVABLE ?= " \
@@ -38,4 +40,4 @@ BBLAYERS_NON_REMOVABLE ?= " \
 "
 
 ROS_DISTRO_BASELINE_PLATFORM ?= "ubuntu-bionic"
-ROS_DISTRO ?= "dashing"
+ROS_DISTRO ?= "eloquent"
