@@ -1,0 +1,14 @@
+Index: 1.0-r0/ap.sh
+===================================================================
+--- 1.0-r0.orig/ap.sh
++++ 1.0-r0/ap.sh
+@@ -58,7 +58,8 @@ done
+ iw phy phy1 interface add p2p0 type managed
+ 
+ #hid=$(ifconfig -a | grep wlan1 | sed "s,wlan1.*HWaddr \(.*\),\1," | tr -d ": ")
+-hid=$(ifconfig -a | grep p2p0 | sed "s,p2p0.*HWaddr \(.*\),\1," | tr -d ": ")
++#hid=$(ifconfig -a | grep p2p0 | sed "s,p2p0.*HWaddr \(.*\),\1," | tr -d ": ")
++hid=$(ifconfig p2p0 | grep ether | tr -d ": ()" | sed "s,[eE]ther,,g" | sed "s,queuelen1000net,,")
+ 
+ ip=192.168.2.1
+ 
