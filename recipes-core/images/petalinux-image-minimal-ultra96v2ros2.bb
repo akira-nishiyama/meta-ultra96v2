@@ -3,6 +3,8 @@ LICENSE = "MIT"
 
 require recipes-core/images/petalinux-image-common.inc 
 
+IMAGE_FEATURES_append = " package-management"
+
 CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-base-extended"
 CORE_IMAGE_EXTRA_INSTALL_append = " wilc"
 CORE_IMAGE_EXTRA_INSTALL_append = " wilc3000-fw"
@@ -17,6 +19,11 @@ CORE_IMAGE_EXTRA_INSTALL_append = " bluez5"
 CORE_IMAGE_EXTRA_INSTALL_append = " usbutils"
 CORE_IMAGE_EXTRA_INSTALL_append = " ethtool"
 CORE_IMAGE_EXTRA_INSTALL_append = " i2c-tools"
+CORE_IMAGE_EXTRA_INSTALL_append = " parted"
+CORE_IMAGE_EXTRA_INSTALL_append = " e2fsprogs"
+CORE_IMAGE_EXTRA_INSTALL_append = " e2fsprogs-resize2fs"
+CORE_IMAGE_EXTRA_INSTALL_append = " e2fsprogs-e2fsck"
+CORE_IMAGE_EXTRA_INSTALL_append = " e2fsprogs-mke2fs"
 
 CORE_IMAGE_EXTRA_INSTALL_append = " xrt"
 CORE_IMAGE_EXTRA_INSTALL_append = " xrt-dev"
@@ -24,6 +31,12 @@ CORE_IMAGE_EXTRA_INSTALL_append = " zocl"
 CORE_IMAGE_EXTRA_INSTALL_append = " opencl-clhpp-dev"
 CORE_IMAGE_EXTRA_INSTALL_append = " opencl-headers-dev"
 CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-opencv"
+CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-vitisai"
+CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-vitisai-dev"
+
+#ORB_SLAM2
+CORE_IMAGE_EXTRA_INSTALL_append = " orb-slam2"
+
 
 CORE_IMAGE_EXTRA_INSTALL_append = " ros-core"
 
