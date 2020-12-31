@@ -34,5 +34,9 @@ CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-opencv"
 CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-vitisai"
 CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-petalinux-vitisai-dev"
 
+#ORB_SLAM2
+CORE_IMAGE_EXTRA_INSTALL_append = " orb-slam2"
+
+
 CORE_IMAGE_EXTRA_INSTALL_append = " ros-core"
 
