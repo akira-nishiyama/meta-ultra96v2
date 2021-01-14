@@ -7,61 +7,47 @@
 #
 # The following license files were not able to be identified and are
 # represented as "Unknown" below, you will need to check them yourself:
-#   LICENSE.txt
-#   orb_slam2/Thirdparty/DBoW2/LICENSE.txt
-#   orb_slam2/Thirdparty/g2o/license-bsd.txt
-#
-# NOTE: multiple licenses have been detected; they have been separated with &
-# in the LICENSE value for now since it is a reasonable assumption that all
-# of the licenses apply. If instead there is a choice between the multiple
-# licenses then you should change the value to separate the licenses with |
-# instead of &. If there is any doubt, check the accompanying documentation
-# to determine which situation is applicable.
-LICENSE = "BSD"
-#LIC_FILES_CHKSUM = "file://"
+#   LICENSE
+LICENSE = "BSD-3-Clause"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=f291781eb70f566623f1fe31190fb837"
 
-SRC_URI = "git://github.com/appliedAI-Initiative/orb_slam_2_ros.git;protocol=https;branch=ros2"
+SRC_URI = "git://github.com/ptrmu/ros2_shared.git;protocol=https;branch=eloquent"
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"
-SRCREV = "e7f682e68016ea855bf8ef7d0d752c94a4053a61"
+SRCREV = "01b6b31d914819fb280d33d713ac5e2e4ad4edad"
 
 S = "${WORKDIR}/git"
 
 inherit ros_distro_eloquent
 inherit ros_superflore_generated
 
-DESCRIPTION = ""
-AUTHOR = "Jack O'Quin"
+DESCRIPTION = "Shared code for ROS2"
+AUTHOR = "Peter Mullen"
 ROS_AUTHOR = ""
-HOMEPAGE = "https://wiki.ros.org/camera_info_manager"
+HOMEPAGE = ""
 SECTION = "devel"
 
-ROS_CN = "image-common"
-ROS_BPN = "camera-info-manager"
+ROS_CN = "ros2_shared"
+ROS_BPN = "ros2_shared"
 
 ROS_BUILD_DEPENDS = " \
-    camera-calibration-parsers \
-    image-transport \
-    rclcpp \
-    sensor-msgs \
 "
 
 ROS_BUILDTOOL_DEPENDS = " \
     ament-cmake-native \
 "
 
-ROS_EXPORT_DEPENDS = ""
+ROS_EXPORT_DEPENDS = " \
+"
 
 ROS_BUILDTOOL_EXPORT_DEPENDS = ""
 
-ROS_EXEC_DEPENDS = ""
+ROS_EXEC_DEPENDS = " \
+"
 
 # Currently informational only -- see http://www.ros.org/reps/rep-0149.html#dependency-tags.
 ROS_TEST_DEPENDS = " \
-    ament-cmake-gtest \
-    ament-lint-auto \
-    ament-lint-common \
 "
 
 DEPENDS = "${ROS_BUILD_DEPENDS} ${ROS_BUILDTOOL_DEPENDS}"
@@ -70,6 +56,8 @@ DEPENDS = "${ROS_BUILD_DEPENDS} ${ROS_BUILDTOOL_DEPENDS}"
 DEPENDS += "${ROS_EXPORT_DEPENDS} ${ROS_BUILDTOOL_EXPORT_DEPENDS}"
 
 RDEPENDS_${PN} += "${ROS_EXEC_DEPENDS}"
+
+FILES_${PN} += "*"
 
 ROS_BUILD_TYPE = "ament_cmake"
 

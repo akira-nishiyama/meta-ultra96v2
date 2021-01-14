@@ -1,0 +1,6 @@
+ROS_BUILD_DEPENDS_remove = "mesa"
+ROS_BUILD_DEPENDS_append = " mesa-gl"
+ROS_EXPORT_DEPENDS_remove = "mesa"
+ROS_EXPORT_DEPENDS_append = " mesa-gl"
+ROS_EXEC_DEPENDS_remove = "mesa"
+ROS_EXEC_DEPENDS_append = " mesa-gl"
